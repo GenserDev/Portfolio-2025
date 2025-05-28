@@ -1,0 +1,8 @@
+.init-container {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding-top: 10vh;
+}
+
