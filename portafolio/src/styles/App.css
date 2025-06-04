@@ -1,12 +1,29 @@
-.background {
-    width: '100vw';
-    height: '100vh';
-    overflow: 'hidden';
-    position: relative;
+.principal-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 2rem;
 }
 
-.spline-background {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+.personal-card{
+  padding: 1rem;
 }
+
+.init-box {
+  padding: 1rem;
+}
+
+/* .spline-box {
+  flex: 1;
+  padding: 1rem;
+}
+
+.d3-objects {
+  width: 100%;
+  height: auto;
+}  */
