@@ -17,12 +17,6 @@
   padding: 1rem;
 }
 
-/* .spline-box {
-  flex: 1;
-  padding: 1rem;
+.title-container h2{
+  visibility: hidden;
 }
-
-.d3-objects {
-  width: 100%;
-  height: auto;
-}  */

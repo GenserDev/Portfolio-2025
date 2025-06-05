@@ -221,3 +221,69 @@
     grid-row: span 1;
   }
 }
+
+/* ... (código anterior) */
+
+/* Nuevos estilos para los botones */
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.github-btn, .demo-btn {
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  min-width: 120px;
+  justify-content: center;
+}
+
+.github-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.github-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.demo-btn {
+  background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+}
+
+.demo-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(76, 175, 80, 0.3);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .project-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  
+  .github-btn, .demo-btn {
+    width: 100%;
+    max-width: 200px;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .github-btn, .demo-btn {
+    font-size: 0.8rem;
+  }
+}

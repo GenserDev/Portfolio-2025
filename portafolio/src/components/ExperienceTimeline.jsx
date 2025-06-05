@@ -6,22 +6,22 @@ const ExperienceTimeline = () => {
     {
       id: 1,
       type: 'education',
-      title: 'Ingeniería en Sistemas',
-      company: 'Universidad de Guatemala',
-      period: '2020 - 2024',
+      title: 'Computer Science',
+      company: 'Universidad del Valle de Guatemala',
+      period: '2023 - 2027',
       description: 'Formación en desarrollo de software, bases de datos, algoritmos y estructuras de datos. Participación en proyectos de desarrollo web y aplicaciones móviles.',
       icon: '🎓',
-      technologies: ['Java', 'Python', 'SQL', 'C++']
+      technologies: ['Java', 'Python', 'PostgreSQL', 'Javascript', "React", "Vue"]
     },
     {
       id: 2,
       type: 'work',
-      title: 'Software Developer',
-      company: 'Tech Solutions GT',
-      period: '2023 - Presente',
-      description: 'Desarrollo de aplicaciones web con React y Node.js. Colaboración en proyectos de comercio electrónico y sistemas de gestión. Implementación de APIs RESTful.',
+      title: 'Project Manager GS Stock',
+      company: 'Comercializadora e importadora Genser',
+      period: '2025 - Presente',
+      description: 'Desarrollo de software a la medida para la gestion de ventas e inventario para una empresa distribuidora de calzado de dama para todos los departamentos de Guatemala',
       icon: '💼',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express']
+      technologies: ['Vue', 'Node.js', 'Express', 'PostgreSQL', "Socket.io", "CSS"]
     }
   ];
 

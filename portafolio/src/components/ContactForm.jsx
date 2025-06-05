@@ -31,7 +31,7 @@ const ContactForm = () => {
         `Hola Genser,\n\nMi nombre es ${formData.name}.\n\n${formData.message}\n\nSaludos,\n${formData.name}\n${formData.email}`
       );
       
-      const mailtoLink = `mailto:genser.catalan@gmail.com?subject=${subject}&body=${body}`;
+      const mailtoLink = `mailto:genserdev@gmail.com?subject=${subject}&body=${body}`;
       
       // Abrir cliente de correo
       window.location.href = mailtoLink;
@@ -142,7 +142,7 @@ const ContactForm = () => {
         <div className="contact-info">
           <div className="contact-item">
             <span className="icon">📧</span>
-            <span>genser.catalan@gmail.com</span>
+            <span>genserdev@gmail.com</span>
           </div>
           <div className="contact-item">
             <span className="icon">📍</span>

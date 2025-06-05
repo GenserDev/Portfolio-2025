@@ -4,7 +4,7 @@ import Init from "./components/Init.jsx";
 import ProfileCard from './components/ProfileCard.jsx';
 import Header from "./components/Header.jsx";
 import Background from "./components/Background.jsx";
-// import AboutModal from './components/AboutModal.jsx';
+import AboutModal from './components/AboutModal.jsx';
 import ExperienceTimeline from './components/ExperienceTimeline.jsx';
 import ProjectsGrid from './components/ProjectsGrid.jsx';
 import ContactForm from './components/ContactForm.jsx';
@@ -32,7 +32,8 @@ function App() {
           <Init />
         </div>
 
-        <div className="personal-card">
+        <div className="personal-card" id='about-me'>
+          <h2 className='title-container'>About me</h2>
           <ProfileCard
             name="Genser Catalán"
             title="Software Engineer"
@@ -47,25 +48,25 @@ function App() {
         </div>
       </div>
 
-      <div className="projects-container" id='projects'>
+      <div className="title-container" id='projects'>
         <h2>Projects</h2>
         <ProjectsGrid />
       </div>
 
-      <div className="experience-container" id='experience'>
+      <div className="title-container" id='experience'>
         <h2>Experience</h2>
         <ExperienceTimeline />
       </div>
 
-      <div className="contact-container" id='contact-me'>
+      <div className="title-container" id='contact-me'>
         <h2>Contact me</h2>
         <ContactForm />
       </div>
 
-      {/* <AboutModal 
+      <AboutModal 
         isOpen={isAboutModalOpen} 
         onClose={handleCloseModal} 
-      /> */}
+      />
     </>
   );
 }
