@@ -1,10 +1,8 @@
-import React from 'react';
-import calculadora from "../assets/projects/calculadora.png";
 import memory from "../assets/projects/memory.png";
 import crud from "../assets/projects/crud.png";
 import webchat from "../assets/projects/webchat.png";
-import pokemon from "../assets/projects/pokemon.png";
 import genserstock from "../assets/projects/genserstock.png";
+import github from "../assets/github-logo.png";
 import '../styles/ProjectsGrid.css';
 
 const ProjectsGrid = () => {
@@ -12,46 +10,26 @@ const ProjectsGrid = () => {
   {
     id: 1,
     title: 'Game Inventory',
-    description: 'Plataforma para controlar el invetario de una tienda de videojuegos utilizando un CRUD.',
+    description: 'Plataforma para controlar el inventario de una tienda de videojuegos utilizando un CRUD.',
     image: crud,
-    technologies: ['React', 'Node.js', 'PostgreSQL', "CSS"],
+    technologies: ['React', 'Node.js', 'PostgreSQL', "CSS3", "Javascript", "HTML5"],
     githubUrl: 'https://github.com/GenserDev/game-shop-crud',
-    size: 'large'
+    size: 'large' 
   },
   {
     id: 2,
-    title: 'Pokedex',
-    description: 'Aplicacion que permite la visualizacion de todos los pokemones de primera generacion por medio de su API.',
-    image: pokemon, 
-    technologies: ['HTML', 'CSS', 'Javascript'],
-    githubUrl: 'https://github.com/GenserDev/Poke-Guide',
-    demo: 'https://genserdev.space/Poke-Guide/',
-    size: 'medium'
+    title: 'Memory Game', 
+    description: 'Juego de memoria con temática de lenguajes y frameworks de programación',
+    image: memory, 
+    technologies: ['React', "CSS3", "Javascript", "HTML5"],
+    githubUrl: 'https://github.com/GenserDev/React-Memory',
+    demo: 'https://23401.genserdev.space/dist/',
+    size: 'small'
   },
   {
     id: 3,
-    title: 'Calculadora', 
-    description: 'Calculadora con las funciones de operaciones basicas y manejo de errores.',
-    image: calculadora,
-    technologies: ['React', "CSS"],
-    githubUrl: 'https://github.com/GenserDev/Calculator',
-    demo: 'https://github.com/GenserDev/game-shop-crud',
-    size: 'medium'
-  },
-  {
-    id: 4,
-    title: 'Memory Game', 
-    description: 'Juego de memoria con temática de lenguajes y frameworks de programacion',
-    image: memory, 
-    technologies: ['React', 'CSS'],
-    githubUrl: 'https://github.com/GenserDev/React-Memory',
-    demo: 'https://23401.genserdev.space/dist/',
-    size: 'medium'
-  },
-  {
-    id: 5,
     title: 'WebChat',
-    description: "Sitio web conectado a una API para el menejo de mensajes en tiempo real",
+    description: "Sitio web conectado a una API para el manejo de mensajes en tiempo real",
     image: webchat, 
     technologies: ["HTML", "CSS", "Javascript"],
     githubUrl: 'https://github.com/GenserDev/Web-Chat',
@@ -59,15 +37,16 @@ const ProjectsGrid = () => {
     size: 'small'
   },
   {
-    id: 6,
+    id: 4,
     title: 'GS Stock',
     description: 'Software a la medida para el control de ventas e inventario para una empresa distribuidora de calzado de dama.',
     image: genserstock, 
-    technologies: ['Vue', 'Express', "Node.js", 'PostgreSQL', "Socket.io"],
+    technologies: ['Vue', 'Express', "Node.js", 'PostgreSQL', "Docker", "CSS3", "Javascript", "HTML5"],
     githubUrl: 'https://github.com/JosFer720/GS-Stock-y-Facturacion-Frontend',
-    size: 'small'
+    size: 'medium' 
   }
 ];
+
   const handleGithubClick = (url) => {
     window.open(url, '_blank');
   };
@@ -88,17 +67,14 @@ return (
                 ))}
               </div>
               
-              {/* Contenedor para los botones */}
+
               <div className="project-buttons">
                 <button 
                   className="github-btn"
                   onClick={() => handleGithubClick(project.githubUrl)}
                   aria-label={`Ver código de ${project.title} en GitHub`}
                 >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 0c-6.626 0-12 5.373-12 12..." />
-                  </svg>
-                  GitHub
+                  <img src={github} className="github-logo" alt="GitHub" />
                 </button>
 
                 {project.demo && (

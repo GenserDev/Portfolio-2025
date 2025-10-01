@@ -2,6 +2,7 @@
   max-width: 600px;
   margin: 0 auto;
   padding: 2rem;
+  width: 100%;
 }
 
 .contact-card {
@@ -12,6 +13,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 .contact-card::before {
@@ -29,21 +31,24 @@
   margin-bottom: 2rem;
 }
 
-.contact-header h2 {
-  color: #fff;
-  font-size: 2.2rem;
+.contact-header .title-contact {
+  color: #fff; 
+  font-size: clamp(1.8rem, 5vw, 2.2rem);
   font-weight: 700;
   margin-bottom: 0.5rem;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  line-height: 1.2;
 }
 
 .contact-header p {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 1.1rem;
-  line-height: 1.5;
+    color: #fff;
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    line-height: 1.3;
 }
 
 .contact-form {
@@ -59,7 +64,7 @@
   color: #fff;
   font-weight: 500;
   margin-bottom: 0.5rem;
-  font-size: 0.95rem;
+  font-size: clamp(0.9rem, 2.5vw, 0.95rem);
 }
 
 .form-group input,
@@ -70,9 +75,10 @@
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.05);
   color: #fff;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+  box-sizing: border-box;
 }
 
 .form-group input:focus,
@@ -101,7 +107,7 @@
   color: white;
   padding: 1rem 2rem;
   border-radius: 15px;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 3vw, 1.1rem);
   font-weight: 600;
   cursor: pointer;
   display: flex;
@@ -158,6 +164,7 @@
   text-align: center;
   font-weight: 500;
   margin-top: 1rem;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
 .status-message.success {
@@ -185,57 +192,151 @@
   align-items: center;
   gap: 0.8rem;
   color: rgba(255, 255, 255, 0.8);
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 2.5vw, 0.95rem);
 }
 
 .contact-item .icon {
-  font-size: 1.2rem;
+  font-size: clamp(1.1rem, 3vw, 1.2rem);
   min-width: 24px;
+  flex-shrink: 0;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Mobile responsive */
+@media (max-width: 640px) {
   .contact-form-container {
     padding: 1rem;
   }
   
   .contact-card {
     padding: 2rem 1.5rem;
+    border-radius: 20px;
   }
   
-  .contact-header h2 {
-    font-size: 1.8rem;
-  }
-  
-  .contact-header p {
-    font-size: 1rem;
+  .form-group {
+    margin-bottom: 1.2rem;
   }
   
   .form-group input,
   .form-group textarea {
     padding: 0.7rem 0.8rem;
+    border-radius: 10px;
+  }
+  
+  .form-group textarea {
+    min-height: 100px;
   }
   
   .submit-btn {
     padding: 0.9rem 1.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact-card {
-    padding: 1.5rem 1rem;
-  }
-  
-  .contact-header h2 {
-    font-size: 1.6rem;
+    border-radius: 12px;
   }
   
   .contact-info {
     gap: 0.8rem;
+    padding-top: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form-container {
+    padding: 0.8rem;
+  }
+  
+  .contact-card {
+    padding: 1.8rem 1.2rem;
+    border-radius: 18px;
+  }
+  
+  .contact-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 0.6rem 0.7rem;
+  }
+  
+  .submit-btn {
+    padding: 0.8rem 1.2rem;
+  }
+  
+  .contact-info {
+    gap: 0.6rem;
   }
   
   .contact-item {
-    font-size: 0.9rem;
+    gap: 0.6rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .contact-form-container {
+    padding: 0.5rem;
+  }
+  
+  .contact-card {
+    padding: 1.5rem 1rem;
+    border-radius: 15px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 0.5rem 0.6rem;
+  }
+  
+  .submit-btn {
+    padding: 0.7rem 1rem;
+  }
+  
+  .status-message {
+    padding: 0.8rem;
+  }
+}
+
+/* Landscape mode for mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+  .contact-form-container {
+    padding: 1rem;
+  }
+  
+  .contact-card {
+    padding: 1.5rem;
+  }
+  
+  .contact-header {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group textarea {
+    min-height: 80px;
+  }
+  
+  .contact-info {
+    padding-top: 1rem;
+    gap: 0.5rem;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .contact-form-container {
+    max-width: 700px;
+    padding: 3rem;
+  }
+  
+  .contact-card {
+    padding: 3rem;
+  }
+  
+  .form-group textarea {
+    min-height: 140px;
   }
 }

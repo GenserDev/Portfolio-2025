@@ -7,16 +7,115 @@
   align-items: center;
   justify-content: center;
   height: 90vh;
+  padding: 1rem;
+  gap: 2rem;
 }
 
-.personal-card{
+.personal-card {
   padding: 1rem;
+  width: 100%;
+  max-width: 400px;
+  display: none; /* Oculto por defecto para móviles */
+  justify-content: center;
 }
 
 .init-box {
   padding: 1rem;
+  width: 100%;
+  max-width: none; /* Sin límite en móviles para ocupar todo el ancho */
+  flex: 1;
 }
 
-.title-container h2{
+.title-container h2 {
   visibility: hidden;
+}
+
+/* Mobile First Approach */
+@media (max-width: 480px) {
+  .principal-container {
+    flex-direction: column;
+    height: auto;
+    min-height: 90vh;
+    padding: 0.5rem;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .personal-card {
+    display: none; /* Ocultar en móviles pequeños */
+  }
+  
+  .init-box {
+    order: 1;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .principal-container {
+    flex-direction: column;
+    height: auto;
+    min-height: 90vh;
+    padding: 1rem;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .personal-card {
+    display: none; /* Ocultar en móviles medianos */
+  }
+  
+  .init-box {
+    order: 1;
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .principal-container {
+    flex-direction: row;
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+  
+  .personal-card {
+    display: flex; /* Mostrar en tablets */
+    flex: 0 0 auto;
+    max-width: 350px;
+  }
+  
+  .init-box {
+    flex: 1;
+    max-width: 550px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .principal-container {
+    flex-direction: row;
+    gap: 3rem;
+    padding: 2rem;
+  }
+  
+  .personal-card {
+    display: flex; /* Mostrar en desktop */
+    flex: 0 0 auto;
+    max-width: 400px;
+  }
+  
+  .init-box {
+    flex: 1;
+    max-width: 600px;
+  }
+}
+
+/* Ultra wide screens */
+@media (min-width: 1440px) {
+  .principal-container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
 }

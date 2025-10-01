@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Spline from '@splinetool/react-spline';
 import Init from "./components/Init.jsx";
 import ProfileCard from './components/ProfileCard.jsx';
 import Header from "./components/Header.jsx";

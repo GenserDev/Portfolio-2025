@@ -9,19 +9,19 @@ const ExperienceTimeline = () => {
       title: 'Computer Science',
       company: 'Universidad del Valle de Guatemala',
       period: '2023 - 2027',
-      description: 'Formación en desarrollo de software, bases de datos, algoritmos y estructuras de datos. Participación en proyectos de desarrollo web y aplicaciones móviles.',
+      description: 'Formación en desarrollo de software, bases de datos, algoritmos y estructuras de datos. Participación en proyectos de desarrollo web.',
       icon: '🎓',
-      technologies: ['Java', 'Python', 'PostgreSQL', 'Javascript', "React", "Vue"]
+      technologies: ['Java', 'Python', 'PostgreSQL', 'Javascript', "React", "Vue", "Node.js", "Express"]
     },
     {
       id: 2,
       type: 'work',
-      title: 'Project Manager GS Stock',
-      company: 'Comercializadora e importadora Genser',
-      period: '2025 - Presente',
-      description: 'Desarrollo de software a la medida para la gestion de ventas e inventario para una empresa distribuidora de calzado de dama para todos los departamentos de Guatemala',
+      title: 'GS Stock',
+      company: 'Comercializadora e importadora',
+      period: 'Enero 2025 - Julio 2025',
+      description: 'Lideré un equipo de 3 desarrolladores implementando metodología Scrum para desarrollar un sistema,integral de gestión empresarial con módulos de inventario, ventas, clientes y procesamiento de, pagos/devoluciones.',
       icon: '💼',
-      technologies: ['Vue', 'Node.js', 'Express', 'PostgreSQL', "Socket.io", "CSS"]
+      technologies: ['Vue JS', 'Express JS', 'PostgreSQL', "Docker", "AWS", "Cloudflare", "HTML", "CSS", "Javascript"]
     }
   ];
 

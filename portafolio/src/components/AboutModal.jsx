@@ -29,22 +29,22 @@ const AboutModal = ({ isOpen, onClose }) => {
               <h3>Tecnologías</h3>
               <div className="skills-grid">
                 <span className="skill-tag">React</span>
-                <span className="skill-tag">JavaScript</span>
-                <span className="skill-tag">Node.js</span>
-                <span className="skill-tag">Python</span>
+                <span className="skill-tag">Vue.js</span>
                 <span className="skill-tag">CSS3</span>
                 <span className="skill-tag">HTML5</span>
+                <span className="skill-tag">Javascript</span>
+                <span className="skill-tag">Express.js</span>
+                <span className="skill-tag">Node.js</span>
                 <span className="skill-tag">Git</span>
-                <span className="skill-tag">MongoDB</span>
+                <span className="skill-tag">PostgreSQL</span>
               </div>
             </div>
             
             <div className="interests-section">
               <h3>Intereses</h3>
               <p>
-                Cuando no estoy programando, disfruto explorando nuevas tecnologías, 
-                contribuyendo a proyectos open source y manteniéndome al día con las 
-                últimas tendencias en desarrollo web.
+                Cuando no estoy programando, difruto de escuchar musica, ver series, 
+                peliculas, leer libros y aprender sobre nuevas tecnologías.
               </p>
             </div>
           </div>

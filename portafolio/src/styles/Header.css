@@ -11,6 +11,7 @@
   top: 20px;
   z-index: 1000;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  padding: 5px;
 }
 
 .navegation {
@@ -23,6 +24,7 @@
   border-radius: 15px;
   position: relative;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .navegation:hover {
@@ -45,24 +47,141 @@
   width: 100%;
 }
 
-/* Responsive */
+.navegation.active {
+  background: rgba(102, 126, 234, 0.2);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+.navegation.active::after {
+  width: 100%;
+}
+
+/* Mobile menu button */
+.mobile-menu-btn {
+  display: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile navigation */
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgb(32, 32, 32);
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.mobile-nav.open {
+  display: flex;
+}
+
+.mobile-nav .navegation {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 15px 20px;
+  border-radius: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav .navegation:last-child {
+  border-bottom: none;
+}
+
+/* Responsive breakpoints */
 @media (max-width: 768px) {
   .header-container {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px;
+    flex-direction: column;
+    width: 90vw;
+    position: relative;
   }
   
   .navegation {
+    display: none;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+    align-self: flex-end;
+    margin: 10px;
+  }
+  
+  .header-container.mobile-open {
+    border-radius: 20px 20px 0 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navegation {
     padding: 8px 16px;
-    margin: 5px;
-    font-size: 0.9rem;
+    margin: 3px;
+    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 480px) {
-  .navegation {
-    padding: 6px 12px;
-    font-size: 0.8rem;
+  .header-container {
+    margin: 15px auto;
+    top: 15px;
+    width: 95vw;
+  }
+  
+  .mobile-nav .navegation {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .header-container {
+    margin: 10px auto;
+    top: 10px;
+    width: 98vw;
+    border-radius: 15px;
+  }
+  
+  .mobile-menu-btn {
+    padding: 8px;
+    margin: 8px;
+  }
+  
+  .mobile-nav .navegation {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Landscape mode for mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+  .header-container {
+    margin: 10px auto;
+    top: 10px;
+  }
+  
+  .mobile-nav .navegation {
+    padding: 8px 15px;
+  }
+}
+
+/* Very large screens */
+@media (min-width: 1440px) {
+  .header-container {
+    max-width: 1200px;
   }
 }
