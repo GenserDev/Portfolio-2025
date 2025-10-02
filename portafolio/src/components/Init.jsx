@@ -2,7 +2,7 @@ import linkdin from "../assets/linkdin-logo.png";
 import github from "../assets/github-logo.png";
 import cv from "../assets/download.png";
 import email from "../assets/email.png";
-import "../styles/init.css"
+import "../styles/Init.css";
 
 function Init (){
     return(
