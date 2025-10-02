@@ -7,7 +7,7 @@ import AboutModal from './components/AboutModal.jsx';
 import ExperienceTimeline from './components/ExperienceTimeline.jsx';
 import ProjectsGrid from './components/ProjectsGrid.jsx';
 import ContactForm from './components/ContactForm.jsx';
-import My from "./assets/My.png";
+import My from "./assets/my.png";
 import './styles/App.css';
 
 function App() {
