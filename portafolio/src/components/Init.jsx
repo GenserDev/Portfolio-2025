@@ -18,7 +18,7 @@ function Init (){
                 Github <img src={github} alt="github" />
                 </a>
 
-                <a className="contact-media" href="/CV-Genser-Catalán.pdf" target="_blank" rel="noopener noreferrer">
+                <a className="contact-media" href="/CV-Genser.pdf" target="_blank" rel="noopener noreferrer">
                 CV <img src={cv} alt="download cv" />
                 </a>
 
